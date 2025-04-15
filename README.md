@@ -9,11 +9,11 @@ Get the API keys
 3. GITHUB_CLIENT_ID -> github oauth application
 4. GITHUB_CLIENT_SECRET -> github oauth application
 
-make a .env file and store like this 
-FLASK_SECRET_KEY=abcd...
-GEMINI_API_KEY=abcd...
-GITHUB_CLIENT_ID=abcd...
-GITHUB_CLIENT_SECRET=abcd...
+make a .env file and store like this <br>
+FLASK_SECRET_KEY=abcd... <br>
+GEMINI_API_KEY=abcd... <br>
+GITHUB_CLIENT_ID=abcd... <br>
+GITHUB_CLIENT_SECRET=abcd... <br>
 
 activate the virtual environment
 venv/Scripts/activate
