@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Search Engine</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  {% if 'github_user' in session %}
+    <main class="chat-widget">
+      <h1>Welcome, {{ session['github_user']['login'] }}!</h1>
+      <div id="chat-box" class="glass-box"></div>
+      <form id="search-form">
+        <input type="text" id="user_input" placeholder="Ask something..." autocomplete="off" required />
+        <button type="submit">Send</button>
+        <!-- <a href="/logout"> Logout </a> -->
+      </form>
+    </main>
+  {% else %}
+    <section class="login-section">
+      <div class="login-card">
+        <h2>Welcome to DDC - AI</h2>
+        <a href="/login" class="login-btn">Login with GitHub</a>
+        <p>To proceed, please login with GitHub</p>
+      </div>
+    </section>
+  {% endif %}
+  <script type="module" src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
